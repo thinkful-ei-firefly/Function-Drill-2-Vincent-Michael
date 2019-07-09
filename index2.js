@@ -32,3 +32,35 @@ beyond(0);
 
 // Cracking the code
 
+function decode(word) {
+  let container = '';
+  if (word.charAt(0) === 'a') {
+    container += word.charAt(1);
+  }
+
+  if (word.charAt(0) === 'b') {
+    container += word.charAt(2);
+  }
+
+  if (word.charAt(0) === 'c') {
+    container += word.charAt(3);
+  }
+
+  if (word.charAt(0) === 'd') {
+    container += word.charAt(4);
+  }
+
+  else {
+    container += ' ';
+  }
+  return container;
+}
+
+let example = 'craft block argon meter bells brown croon droop'.split(' ');
+
+let result = '';
+for (let i = 0; i < example.length; i++) {
+  result += decode(example[i]);
+}
+
+console.log(result);
