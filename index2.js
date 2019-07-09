@@ -1,3 +1,5 @@
+// Jedi Name
+
 'use strict';
 
 function jediName(firstName, lastName) {
@@ -5,6 +7,9 @@ function jediName(firstName, lastName) {
 }
 
 console.log(jediName('Harry', 'Potter'));
+
+
+// To infinity
 
 function beyond(num){
   if (num === Infinity || num === Number.NEGATIVE_INFINITY){
@@ -22,3 +27,8 @@ function beyond(num){
 }
 
 beyond(0);
+
+
+
+// Cracking the code
+
