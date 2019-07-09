@@ -102,47 +102,100 @@ console.log(howManyDays('January'));
 
 // Rock paper scissors
 
+// function rps(choice) {
+//   let result = 'test';
+//   const randomNum = Math.floor(Math.random() * 3) + 1;
+//   if (choice !== 1 && choice !== 2 && choice !== 3) {
+//     throw new Error('Must represent rock, paper, or scissors with the number 1, 2, or three.');
+//   }
+//   switch (choice) {
+//   case randomNum === choice:{
+//     result = 'It\'s a tie!';
+//     break;
+//   }
+//   case randomNum === 1 && choice === 2:{
+//     result = 'Computer chose rock, player chose paper. Player wins!';
+//     break;
+//   }
+//   case randomNum === 1 && choice === 3:{
+//     result = 'Computer chose rock, player chose scissors. Computer wins!';
+//     break;
+//   }
+//   case randomNum === 2 && choice === 1:{
+//     result = 'Computer chose paper, player chose rock. Computer wins!';
+//     break;
+//   }
+//   case randomNum === 2 && choice === 3:{
+//     result = 'Computer chose paper, player chose scissors. Player wins!';
+//     break;
+//   }
+//   case randomNum === 3 && choice === 1:{
+//     result = 'Computer chose scissors, player chose rock. Player wins!';
+//     break;
+//   }
+//   case randomNum === 3 && choice === 2:{
+//     result = 'Computer chose scissors, player chose paper. Computer wins!';
+//     break;
+//   }
+//   }
+//   return result;
+// }
+
+
+// console.log(rps(1));
+
+
 function rps(choice) {
-  let result;
+  let result = 'test';
   const randomNum = Math.floor(Math.random() * 3) + 1;
   if (choice !== 1 && choice !== 2 && choice !== 3) {
-    throw new Error('Must represent rock, paper, or scissors with the number 1, 2, or three.');
+    throw new Error('Must represent rock, paper, or scissors with the number 1, 2, or 3.');
   }
-  switch (choice) {
-    case randomNum === choice:{
-      result = 'It\'s a tie!';
-      break;
-    }
-    case randomNum === 1 && choice === 2:{
-      result = 'Computer chose rock, player chose paper. Player wins!';
-      break;
-    }
-    case randomNum === 1 && choice === 3:{
-      result = 'Computer chose rock, player chose scissors. Computer wins!';
-      break;
-    }
-    case randomNum === 2 && choice === 1:{
-      result = 'Computer chose paper, player chose rock. Computer wins!';
-      break;
-    }
-    case randomNum === 2 && choice === 3:{
-      result = 'Computer chose paper, player chose scissors. Player wins!';
-      break;
-    }
-    case randomNum === 3 && choice === 1:{
-      result = 'Computer chose scissors, player chose rock. Player wins!';
-      break;
-    }
-    case randomNum === 3 && choice === 2:{
-      result = 'Computer chose scissors, player chose paper. Computer wins!';
-      break;
-    }
+
+  if (randomNum === choice){
+    result = 'It\'s a tie!';
+    
+  }
+  if (randomNum === 1 && choice === 2){
+    result = 'Computer chose rock, player chose paper. Player wins!';
+    
+  }
+  if (randomNum === 1 && choice === 3){
+    result = 'Computer chose rock, player chose scissors. Computer wins!';
+    
+  }
+  if (randomNum === 2 && choice === 1){
+    result = 'Computer chose paper, player chose rock. Computer wins!';
+    
+  }
+  if (randomNum === 2 && choice === 3){
+    result = 'Computer chose paper, player chose scissors. Player wins!';
+    
+  }
+  if (randomNum === 3 && choice === 1){
+    result = 'Computer chose scissors, player chose rock. Player wins!';
+    
+  }
+  if (randomNum === 3 && choice === 2){
+    result = 'Computer chose scissors, player chose paper. Computer wins!';
+    
   }
   return result;
 }
 
 
-console.log(rps(1));
+console.log(rps(3));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
