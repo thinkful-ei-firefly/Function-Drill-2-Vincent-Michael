@@ -98,3 +98,75 @@ function howManyDays(month, leapYear) {
 }
 
 console.log(howManyDays('January'));
+
+
+// Rock paper scissors
+
+function rps(choice) {
+  let result;
+  const randomNum = Math.floor(Math.random() * 3) + 1;
+  if (choice !== 1 && choice !== 2 && choice !== 3) {
+    throw new Error('Must represent rock, paper, or scissors with the number 1, 2, or three.');
+  }
+  switch (choice) {
+    case randomNum === choice:{
+      result = 'It\'s a tie!';
+      break;
+    }
+    case randomNum === 1 && choice === 2:{
+      result = 'Computer chose rock, player chose paper. Player wins!';
+      break;
+    }
+    case randomNum === 1 && choice === 3:{
+      result = 'Computer chose rock, player chose scissors. Computer wins!';
+      break;
+    }
+    case randomNum === 2 && choice === 1:{
+      result = 'Computer chose paper, player chose rock. Computer wins!';
+      break;
+    }
+    case randomNum === 2 && choice === 3:{
+      result = 'Computer chose paper, player chose scissors. Player wins!';
+      break;
+    }
+    case randomNum === 3 && choice === 1:{
+      result = 'Computer chose scissors, player chose rock. Player wins!';
+      break;
+    }
+    case randomNum === 3 && choice === 2:{
+      result = 'Computer chose scissors, player chose paper. Computer wins!';
+      break;
+    }
+  }
+  return result;
+}
+
+
+console.log(rps(1));
+
+
+
+
+
+/*
+tie: 1/1, 2/2, 3/3
+
+c1 p2 'Computer chose rock, player chose paper. Player wins!'
+c1 p3 'Computer chose rock, player chose scissors. Computer wins!'
+c2 p1 'Computer chose paper, player chose rock. Computer wins!'
+c2 p3 'Computer chose paper, player chose scissors. Player wins!'
+c3 p1 'Computer chose scissors, player chose rock. Player wins!'
+c3 p2 'Computer chose scissors, player chose paper. Computer wins!'
+p1 c2 'Computer chose paper, player chose rock. Computer wins!'
+p1 c3 'Computer chose scissors, player chose rock. Player wins!'
+p2 c1 'Computer chose rock, player chose paper. Player wins!'
+p2 c3 'Computer chose scissors, player chose paper. Computer wins!'
+p3 c1 'Computer chose rock, player chose scissors. Computer wins!'
+p3 c2 'Computer chose paper, player chose scissors. Player wins!'
+
+
+
+
+
+
+*/
